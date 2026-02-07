@@ -4,61 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Writer's Room | Your AI-Powered Writers' Room</title>
+    <meta name="description" content="Your AI-powered writers' room. You're the showrunner. Generate story variants, maintain continuity with your Story Bible, and ship with creative guardrails.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="nav-minimal">
-        <div class="logo">Writer's Room.</div>
+        <a href="/" class="logo">Writer's Room.</a>
         <div class="nav-links">
-            <a href="https://kogn.ist" target="_blank">Platform</a>
-            <a href="https://closed-claw.com" target="_blank">Enterprise</a>
-            <a href="https://kognist.web.app/onboarding" style="color: var(--accent-gold);">Sign In</a>
+            <a href="/guide.html">Guide</a>
+            <a href="https://kognist.web.app/onboarding" class="nav-cta">Sign In</a>
         </div>
     </nav>
 
     <main>
         <section class="hero">
-            <div style="font-family: var(--font-mono); color: var(--accent-purple); font-size: 0.8rem; letter-spacing: 0.05em; margin-bottom: 1rem;">
-                YOUR AI WRITERS' ROOM
-            </div>
+            <div class="hero-label">Your AI Writers' Room</div>
             <h1>Your AI-powered writers' room.<br><span class="highlight">You're the showrunner.</span></h1>
             <p class="sub-text">
                 A traditional writers' room has staff pitching ideas, assistants tracking continuity,
                 and a showrunner who makes final calls. <strong>We've built the same thing</strong> —
                 but the room is filled with AI agents instead of humans.
             </p>
-            <a href="https://kognist.web.app/onboarding" class="btn-primary">Apply for Access</a>
+            <a href="https://kognist.web.app/onboarding" class="btn-primary">Enter the Room</a>
         </section>
 
         <div class="magic-flow">
-            <span>📝 Pitch</span> <span>&rarr;</span>
-            <span>🎭 3 Variants</span> <span>&rarr;</span>
-            <span>🎬 You Direct</span> <span>&rarr;</span>
-            <span>✅ Ship</span>
+            <span class="step">01 PITCH</span>
+            <span class="arrow">&rarr;</span>
+            <span class="step">02 VARIANTS</span>
+            <span class="arrow">&rarr;</span>
+            <span class="step active">03 DIRECT</span>
+            <span class="arrow">&rarr;</span>
+            <span class="step">04 SHIP</span>
         </div>
 
         <section class="card-grid">
             <div class="feature-card">
+                <div class="card-icon">&#9997;</div>
                 <h3>The Staff</h3>
                 <p>For every scene, your AI staff generates 3 variants — one plays it safe, one takes risks, one goes wildcard. You don't write the first draft. You direct the room.</p>
             </div>
             <div class="feature-card">
+                <div class="card-icon">&#128214;</div>
                 <h3>The Story Bible</h3>
                 <p>Your Codex tracks every character, relationship, world rule, and plot thread. When the staff pitches a scene, they check the bible first. Dead characters stay dead.</p>
             </div>
             <div class="feature-card">
-                <h3>The Notes Department</h3>
+                <div class="card-icon">&#128737;</div>
+                <h3>The Governor</h3>
                 <p>The Narrative Governor catches problems before you see them: continuity breaks, voice drift, missing arc beats. If a draft violates your canon, it gets flagged and regenerated.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Part of the <a href="https://kogn.ist" style="color: inherit; text-decoration: underline;">Kognist Ecosystem</a>.</p>
-        <p style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.8rem;">
+        <p class="tagline">"Built for storytellers, not just users."</p>
+        <p>
+            <a href="/guide.html">Guide</a> &nbsp;&middot;&nbsp;
+            <a href="https://kogn.ist">Platform</a> &nbsp;&middot;&nbsp;
+            <a href="mailto:hello@kogn.ist">Contact</a>
+        </p>
+        <p style="margin-top: 1.5rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
             Powered by Context Engine Studio
         </p>
     </footer>
@@ -92,7 +101,7 @@
             </form>
 
             <div id="success-message" class="hidden">
-                <div class="success-icon">✓</div>
+                <div class="success-icon">&#10003;</div>
                 <h3>Application Received!</h3>
                 <p>We'll review your application and get back to you soon.</p>
             </div>
