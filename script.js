@@ -1,7 +1,7 @@
 // Beta Signup Modal
 const API_BASE = window.location.hostname === 'localhost'
     ? 'http://localhost:8000'
-    : 'https://closedclaw.kogn.ist';
+    : 'https://ces-backend-331630083873.us-central1.run.app';
 
 function openModal() {
     const modal = document.getElementById('signup-modal');
