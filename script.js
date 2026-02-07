@@ -56,9 +56,20 @@ async function submitApplication(event) {
             form.classList.add('hidden');
             successMsg.classList.remove('hidden');
         } else if (response.status === 409) {
-            errorText.textContent = 'An application has already been submitted with this email address.';
-            form.classList.add('hidden');
-            errorMsg.classList.remove('hidden');
+            const errorData = await response.json();
+            // Check if this is a "you already have access" message (positive outcome)
+            if (errorData.detail && errorData.detail.includes('already have access')) {
+                // Show as success since we resent the welcome email
+                document.querySelector('#success-message h3').textContent = 'Welcome Back!';
+                document.querySelector('#success-message p').textContent = errorData.detail;
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+            } else {
+                // Show as info message (pending review, etc.)
+                errorText.textContent = errorData.detail || 'An application has already been submitted with this email address.';
+                form.classList.add('hidden');
+                errorMsg.classList.remove('hidden');
+            }
         } else if (response.status === 422) {
             const errorData = await response.json();
             const detail = errorData.detail;
