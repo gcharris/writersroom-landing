@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Writer's Room</title>
+    <meta name="description" content="Writer's Room pricing tiers. Start free, upgrade as you grow. Explorer, Creator, and Showrunner plans.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-4px);
+        }
+        .pricing-card.featured {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 30px rgba(212, 165, 116, 0.15);
+        }
+        .pricing-card .tier-name {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .pricing-card:nth-child(1) .tier-name { color: var(--accent-cyan); }
+        .pricing-card:nth-child(2) .tier-name { color: var(--accent-gold); }
+        .pricing-card:nth-child(3) .tier-name { color: var(--accent-purple); }
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 1rem 0;
+        }
+        .pricing-card .price span {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        .pricing-card .tagline {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 1.5rem 0;
+            padding: 0;
+        }
+        .pricing-card li {
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 0.9rem;
+        }
+        .pricing-card li:last-child {
+            border-bottom: none;
+        }
+        .pricing-card li::before {
+            content: "✓ ";
+            color: var(--accent-gold);
+        }
+        .pricing-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            padding: 0 2rem;
+        }
+        .pricing-intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .pricing-intro p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-minimal">
+        <a href="/" class="logo">
+            <img src="logo.jpg" alt="Writer's Room" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+            <span class="logo-text" style="display: none;">Writer's Room.</span>
+        </a>
+        <div class="nav-links">
+            <a href="/guide.html">Guide</a>
+            <a href="/pricing.html">Pricing</a>
+            <a href="https://kognist.web.app/onboarding" class="nav-cta">Sign In</a>
+        </div>
+    </nav>
+
+    <main style="padding-top: 4rem;">
+        <div class="pricing-intro">
+            <h1>Simple, Honest Pricing</h1>
+            <p>Start free. Upgrade when you need more power. No hidden fees, no per-word charges.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Explorer -->
+            <div class="pricing-card">
+                <div class="tier-name">Explorer</div>
+                <div class="price">Free</div>
+                <div class="tagline">Kick the tires. Mobile-first.</div>
+                <ul>
+                    <li>1 active project</li>
+                    <li>Gemini Flash AI (included)</li>
+                    <li>30 scene generations/month</li>
+                    <li>Chat-based brainstorming</li>
+                    <li>Text output only</li>
+                    <li>Manual export (copy/paste)</li>
+                </ul>
+                <button onclick="openModal()" class="btn-primary" style="width: 100%;">Get Started</button>
+            </div>
+
+            <!-- Creator -->
+            <div class="pricing-card featured">
+                <div class="tier-name">Creator</div>
+                <div class="price">$15<span>/month</span></div>
+                <div class="tagline">The real experience.</div>
+                <ul>
+                    <li>Everything in Explorer, plus:</li>
+                    <li>3 active projects</li>
+                    <li>200 scene generations/month</li>
+                    <li>Voice calibration from sources</li>
+                    <li>Knowledge connections (NotebookLM)</li>
+                    <li>Output sinks (YouTube, Substack)</li>
+                    <li>Hero frames (scene images)</li>
+                </ul>
+                <button onclick="openModal()" class="btn-primary" style="width: 100%;">Apply for Access</button>
+            </div>
+
+            <!-- Showrunner -->
+            <div class="pricing-card">
+                <div class="tier-name">Showrunner</div>
+                <div class="price">$39<span>/month</span></div>
+                <div class="tagline">Full creative control.</div>
+                <ul>
+                    <li>Everything in Creator, plus:</li>
+                    <li>Unlimited projects</li>
+                    <li>500 scene generations/month</li>
+                    <li>Video animation pipeline</li>
+                    <li>Bring Your Own Keys (Claude, etc.)</li>
+                    <li>Claude Code integration</li>
+                    <li>Priority support</li>
+                </ul>
+                <button onclick="openModal()" class="btn-primary" style="width: 100%;">Apply for Access</button>
+            </div>
+        </div>
+
+        <div class="guide-cta" style="max-width: 700px; margin: 4rem auto;">
+            <p><strong>Questions?</strong> Read the <a href="/guide.html" style="color: var(--accent-gold);">User Guide</a> or <a href="mailto:hello@kogn.ist" style="color: var(--accent-gold);">contact us</a>.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p class="tagline">"Built for storytellers, not just users."</p>
+        <p>
+            <a href="/">Home</a> &nbsp;&middot;&nbsp;
+            <a href="/guide.html">Guide</a> &nbsp;&middot;&nbsp;
+            <a href="/pricing.html">Pricing</a> &nbsp;&middot;&nbsp;
+            <a href="mailto:hello@kogn.ist">Contact</a>
+        </p>
+    </footer>
+
+    <!-- Beta Signup Modal (reused from index) -->
+    <div id="signup-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2>Apply for Beta Access</h2>
+            <p class="modal-subtitle">Join the Writer's Room beta and turn your research into published universes.</p>
+            <form id="signup-form" onsubmit="submitApplication(event)">
+                <div class="form-group">
+                    <label for="display_name">Name *</label>
+                    <input type="text" id="display_name" name="display_name" required minlength="2" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company (optional)</label>
+                    <input type="text" id="company" name="company" placeholder="Your company or project">
+                </div>
+                <input type="hidden" name="product_interest" value="writersroom">
+                <button type="submit" class="btn-primary full-width" id="submit-btn">Submit Application</button>
+            </form>
+            <div id="success-message" class="hidden">
+                <div class="success-icon">&#10003;</div>
+                <h3>Application Received!</h3>
+                <p>We'll review your application and get back to you soon.</p>
+            </div>
+            <div id="error-message" class="hidden">
+                <div class="error-icon">!</div>
+                <h3>Oops!</h3>
+                <p id="error-text">Something went wrong. Please try again.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
