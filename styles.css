@@ -26,7 +26,7 @@ body {
 
 /* Navigation - Glassmorphism */
 .nav-minimal {
-    padding: 1.5rem 2rem;
+    padding: 0.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +52,7 @@ body {
 }
 
 .logo-img {
-    height: 220px;
+    height: 320px;
     width: auto;
     object-fit: contain;
 }
@@ -91,7 +91,7 @@ body {
 /* Hero Section */
 .hero {
     max-width: 900px;
-    margin: 8rem auto 4rem;
+    margin: 2rem auto 4rem;
     padding: 0 2rem;
     text-align: center;
     position: relative;
@@ -150,7 +150,7 @@ h1 {
 .sub-text {
     font-size: 1.25rem;
     color: var(--text-secondary);
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -181,7 +181,7 @@ h1 {
     gap: 1rem;
     font-family: var(--font-mono);
     font-size: 0.85rem;
-    margin: 4rem auto;
+    margin: 2rem auto;
     padding: 1.25rem 2rem;
     background: var(--bg-secondary);
     border: 1px solid var(--border-subtle);
