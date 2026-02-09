@@ -160,6 +160,19 @@ h1 {
     color: var(--text-primary);
 }
 
+/* Hero CTAs - Dual button layout */
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-ctas .btn-primary,
+.hero-ctas .btn-secondary {
+    min-width: 200px;
+}
+
 /* Process Flow Strip */
 .magic-flow {
     display: flex;
@@ -534,4 +547,207 @@ footer .tagline {
 .guide-cta p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+/* Example Section (See it in action) */
+.example-section {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.example-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.example-prompt {
+    background: var(--bg-card);
+    padding: 1rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent-cyan);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.example-output {
+    padding: 1.5rem;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.example-output p {
+    margin-bottom: 1rem;
+}
+
+.example-output p:last-child {
+    margin-bottom: 0;
+}
+
+.example-attribution {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    border-top: 1px solid var(--border-subtle);
+}
+
+/* Surfaces Section (Two ways to play) */
+.surfaces-section {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.surfaces-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.surface-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.surface-card:hover {
+    transform: translateY(-4px);
+}
+
+.surface-card:first-child:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 30px rgba(88, 166, 255, 0.15);
+}
+
+.surface-card:last-child:hover {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 30px rgba(212, 165, 116, 0.15);
+}
+
+.surface-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.surface-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.tier-badge {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+}
+
+.tier-badge.free {
+    background: var(--accent-cyan);
+    color: var(--bg-primary);
+}
+
+.tier-badge.creator {
+    background: var(--accent-gold);
+    color: var(--bg-primary);
+}
+
+.surface-for {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.surface-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.surface-cta {
+    width: 100%;
+}
+
+/* Differentiators Section */
+.differentiators-section {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.differentiators-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.differentiator {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+}
+
+.diff-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.differentiator p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.differentiator strong {
+    color: var(--text-primary);
+}
+
+/* Final CTA Section */
+.final-cta-section {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+}
+
+.final-cta-section h2 {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.final-cta-section p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
 }
