@@ -49,12 +49,17 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    height: 100px;
+    width: 320px; /* Constrain width to ensure it doesn't break layout */
 }
 
 .logo-img {
-    height: 320px;
+    height: 340px; /* Large enough to show detail */
     width: auto;
-    object-fit: contain;
+    object-fit: cover;
+    /* Center the image within the container if it has padding */
+    margin-top: -10px; /* Slight adjustment if needed, usually flex centers it */
 }
 
 .logo-text {
